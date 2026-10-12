@@ -1,0 +1,26 @@
+1. A parking lot contains cars, motorcycles,
+and bicycles. Display all vehicles that are red.
+
+2. A food warehouse stocks salt, sugar, and flour. Display the products
+priced higher than 20 RON/kg.
+
+3. A repair shop is servicing several cars, trucks, and motorcycles. Display
+all vehicles with a repair cost exceeding 1000 RON.
+
+4. A farm raises poultry, cows, and pigs.
+Display all animals weighing more than 3 kg.
+
+5. A greenhouse grows tomatoes, peppers, and eggplants.
+Display all vegetables weighing more than 0.2 kg.
+
+6. An orchard contains apple, pear, and cherry trees.
+Display all fruit trees older than 3 years.
+
+--> 7. A collection of objects shaped like cubes, spheres, and cylinders is provided.
+Display the objects with a volume greater than 25 cm³.
+
+8. An aquarium houses fish and turtles.
+Display all the creatures in the aquarium that are older than 1 year.
+
+9. Professors, students, and industry specialists
+are attending a conference. Display all participants who presented a paper.
