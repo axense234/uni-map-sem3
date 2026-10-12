@@ -14,5 +14,6 @@ public class Main {
         GeometricalObjectController controller = new GeometricalObjectController(goRepo);
         GeometricalObjectView view = new GeometricalObjectView(controller);
         view.start();
+        // test
     }
 }
