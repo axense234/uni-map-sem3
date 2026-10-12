@@ -5,4 +5,6 @@ public interface GeometricalObject extends EntityWithId {
 
     public void setId(int id);
 
+    public String toString();
+
 }

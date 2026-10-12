@@ -5,6 +5,10 @@ public class Cylinder implements GeometricalObject {
     protected int radius;
     protected int height;
 
+    public String toString() {
+        return "Cylinder " + this.id + ", radius: " + this.radius + ", height: " + this.height;
+    }
+
     public Cylinder(int id, int radius, int height) {
         this.id = id;
         this.radius = radius;

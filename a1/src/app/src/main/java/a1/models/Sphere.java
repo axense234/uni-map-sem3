@@ -4,6 +4,10 @@ public class Sphere implements GeometricalObject {
     protected int id;
     protected int radius;
 
+    public String toString() {
+        return "Sphere " + this.id + ", radius: " + this.radius;
+    }
+
     public Sphere(int id, int radius) {
         this.id = id;
         this.radius = radius;

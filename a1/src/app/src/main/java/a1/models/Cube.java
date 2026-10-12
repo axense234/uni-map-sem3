@@ -9,6 +9,10 @@ public class Cube implements GeometricalObject {
         this.side = side;
     }
 
+    public String toString() {
+        return "Cube " + this.id + ", side: " + this.side;
+    }
+
     public int getId() {
         return this.id;
     }
