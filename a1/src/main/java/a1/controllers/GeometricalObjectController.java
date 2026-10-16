@@ -12,7 +12,13 @@ public class GeometricalObjectController {
     }
 
     public void addGeometricalObject(GeometricalObject object) {
-        this.repo.store(object);
+        try {
+            this.repo.getEntityById(object.getId());
+            throw new IllegalStateException("Geometrical object already exists");
+        } catch (IllegalArgumentException e){
+            this.repo.store(object);
+        }
+
     }
 
     public void removeGeometricalObjectById(int goId) {

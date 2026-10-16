@@ -67,35 +67,49 @@ public class GeometricalObjectView {
             try {
                 switch (type.toLowerCase()) {
                     case "cube": {
+                        System.out.print("Object Id (INT): ");
+                        int objectId = Integer.parseInt(scanner.nextLine());
                         System.out.print("Cube Side: ");
                         int side = Integer.parseInt(scanner.nextLine().trim());
-                        created = new Cube(1, side);
+                        created = new Cube(objectId, side);
+                        controller.addGeometricalObject(created);
+                        System.out.println("Added: " + created.toString());
                         break;
                     }
                     case "cylinder": {
+                        System.out.print("Object Id (INT): ");
+                        int objectId = Integer.parseInt(scanner.nextLine());
                         System.out.print("Cylinder Radius: ");
                         int r = Integer.parseInt(scanner.nextLine().trim());
                         System.out.print("Cylinder Height: ");
                         int h = Integer.parseInt(scanner.nextLine().trim());
-                        created = new Cylinder(1, r, h);
+                        created = new Cylinder(objectId, r, h);
+                        controller.addGeometricalObject(created);
+                        System.out.println("Added: " + created.toString());
                         break;
                     }
                     case "sphere": {
+                        System.out.print("Object Id (INT): ");
+                        int objectId = Integer.parseInt(scanner.nextLine());
                         System.out.print("Sphere Radius: ");
                         int r = Integer.parseInt(scanner.nextLine().trim());
-                        created = new Sphere(1, r);
+                        created = new Sphere(objectId, r);
+                        controller.addGeometricalObject(created);
+                        System.out.println("Added: " + created.toString());
                         break;
                     }
                     default:
                         System.out.println("Invalid type. Available types: Cube, Cylinder, Sphere.");
                 }
+
             } catch (NumberFormatException e) {
                 System.out.println("Not a valid number: " + e.getMessage());
+            } catch (IllegalStateException e){
+                System.out.println("Could not add geometrical object. Id validation error.");
             }
         }
 
-        controller.addGeometricalObject(created);
-        System.out.println("Added: " + created.toString());
+
     }
 
     public void deleteGeometricalObjectByGivenId() {

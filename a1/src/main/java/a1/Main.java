@@ -9,11 +9,10 @@ import a1.views.GeometricalObjectView;
 
 public class Main {
 
-    public static void main(String[] args) {
+    static void main(String[] args) {
         GeometricalObjectRepo goRepo = new GeometricalObjectRepo();
         GeometricalObjectController controller = new GeometricalObjectController(goRepo);
         GeometricalObjectView view = new GeometricalObjectView(controller);
         view.start();
-        // test
     }
 }
