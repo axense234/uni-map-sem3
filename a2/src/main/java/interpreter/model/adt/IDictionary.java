@@ -1,4 +1,10 @@
 package interpreter.model.adt;
 
+import interpreter.exceptions.ExpressionException;
+
 public interface IDictionary<K, V> {
+    boolean isDefined(K key);
+    V lookup(K key) throws ExpressionException;
+    void put(K key, V value);
+    void update(K key, V newValue) throws ExpressionException;
 }
